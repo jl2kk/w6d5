@@ -60,3 +60,109 @@ Migrating to CreateCat (20230609191024)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mCat Create (1.3ms)[0m  [1m[32mINSERT INTO "cats" ("birth_date", "color", "name", "sex", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["birth_date", "2020-02-03"], ["color", "gray"], ["name", "jerry"], ["sex", "M"], ["description", "my name is jerry"], ["created_at", "2023-06-09 20:41:18.896812"], ["updated_at", "2023-06-09 20:41:18.896812"]]
   [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2023-06-09 16:23:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+ActionController::RoutingError - uninitialized constant CatsController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  CatController
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/5cafc3bea51eb7d9/variables" for 127.0.0.1 at 2023-06-09 16:23:19 -0400
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:23:56 -0400
+
+ActionController::RoutingError - uninitialized constant CatsController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  CatController
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/79052447d877c09f/variables" for 127.0.0.1 at 2023-06-09 16:23:56 -0400
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:25:33 -0400
+
+ActionController::RoutingError - uninitialized constant CatsController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  CatController
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/5ee42f66e710833c/variables" for 127.0.0.1 at 2023-06-09 16:25:33 -0400
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:25:45 -0400
+
+ActionController::RoutingError - uninitialized constant CatsController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  CatController
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/d5c96661d06ad5c9/variables" for 127.0.0.1 at 2023-06-09 16:25:45 -0400
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:25:51 -0400
+
+ActionController::RoutingError - uninitialized constant CatsController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  CatController
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/dd0313ed65f23d79/variables" for 127.0.0.1 at 2023-06-09 16:25:51 -0400
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:26:28 -0400
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 3967)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/home/jl2kk/w6d5/ninety-nine-cats/app/views"
+Did you mean?  layouts/cats/index
+               layouts/cats/new
+               layouts/cats/edit
+               layouts/application
+               layouts/cats/show:
+  app/controllers/cats_controller.rb:6:in `index'
+
+Started POST "/__better_errors/c722770ac39aa93e/variables" for 127.0.0.1 at 2023-06-09 16:26:28 -0400
+  [1m[36mCat Load (2.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):73:in `block in render_template'
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:27:20 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:8
+  Rendered cats/index.html.erb (Duration: 4.3ms | Allocations: 1109)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.7ms | Allocations: 4076)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:28:00 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:8
+  Rendered cats/index.html.erb (Duration: 2.9ms | Allocations: 838)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 1586)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:28:25 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:8
+  Rendered cats/index.html.erb (Duration: 2.2ms | Allocations: 838)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1583)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-06-09 16:29:00 -0400
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:8
+  Rendered cats/index.html.erb (Duration: 2.8ms | Allocations: 850)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.4ms | Allocations: 1613)
+
+
