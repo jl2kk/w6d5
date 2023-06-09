@@ -6,15 +6,13 @@
 <ul>
 
 <% @cats.each do |cat| %>
-
+    
     <li>
-        <%= cat.name %>
+        <a href="<% cat_url(cat.id) %>"> 
+        <% #we need to link to their show page%>
+            <%= cat.name %>    
+        </a>
     </li>
-
-    <li>
-        <%= cat.color %>
-    </li>
-
 
 <%end%>
  
